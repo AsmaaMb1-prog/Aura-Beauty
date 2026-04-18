@@ -150,14 +150,17 @@ nav {
 /* New Promo Card */
 .promo-card {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, var(--primary), #d4b896);
   color: white;
   padding: 50px;
   text-align: center;
   border-radius: 20px;
   margin-top: 40px;
-  box-shadow: 0 15px 40px rgba(191,163,126,0.3);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
   animation: auraGlow 4s ease-in-out infinite alternate;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(images/spa_surp\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .promo-card h3 {
