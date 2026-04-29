@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إيور بيوتي - المتجر المتكامل</title>
+    <!-- <link rel="stylesheet" href="styleBrotuct.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* الإعدادات العامة */
+* { margin: 0;
+     padding: 0; 
+     box-sizing: border-box;
+      font-family: 'Cairo', sans-serif; }
+
+body { background-color: #F9F6F1; 
+    direction: ltr; 
+    color: #8E7E73; overflow-x: hidden; }
+.wrapper { max-width: 1250px; margin: 0 auto; padding: 0 20px; }
+html { scroll-behavior: smooth; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color: #984f5bd4;
+  position: static;
+  top: 0;
+}
+
+nav h1 {
+  color:  #ffffff;
+;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #551532;
+  font-weight: 400;
+  transition: 0.3s;
+}
+li.acc{
+  background-color: #dcc4cf;
+  border-radius: 40px;
+  padding: 4px;
+}
+
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+
+/* 1. الهيرو سكشن (Hero) */
+.main-hero {
+    width: 100%; height: 400px;
+    background: url(bproduct\ .jpeg) center/cover no-repeat; object-fit: cover;
+    background-size:cover ;
+    background-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    display: flex; align-items: center; justify-content: center;
+    /* margin-top: 20px; */
+}
+/* .hero-inner {
+    background: rgba(64, 14, 19, 0.45);
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+} */
+
+ .hero-inner {
+    width: 100%;
+    height: 100%;
+    
+    /* إلغاء اللون الداكن بجعل الخلفية شفافة تماماً */
+     background: transparent;  
+    
+    backdrop-filter: none; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+ }  
+
+.hero-inner h1 {
+    color:#8E7E73 ;
+    font-size: 42px;
+    font-weight: 800;
+    /* text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8); */
+}
+.hero-inner h1 {
+     color: #6D3A3C; 
+    font-size: 40px; font-weight: 800;
+     /* text-shadow: 2px 2px 10px rgba(0,0,0,0.5); */
+     /* background-color: #C8A49F; */
+     /* border-radius: 20PX; */
+     /* padding: 10PX; */
+     /* box-shadow:  2px 2px 10px rgba(0,0,0,0.5); */
+     }
+
+/* 2.( الأقسام الرئيسية ) */
+.quick-nav { display: flex; gap: 20px; margin: 50px 0; }
+.nav-card {
+    flex: 1; height: 280px; position: relative;
+    border-radius: 20px; overflow: hidden; text-decoration: none;
+}
+.nav-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+.nav-overlay {
+    position: absolute; inset: 0; background: rgba(64, 14, 19, 0.6);
+    display: flex; align-items: center; justify-content: center;
+}
+.nav-overlay span { color: white; font-size: 22px; font-weight: bold; border: 2px solid white; padding: 12px 25px; border-radius: 50px; }
+.nav-card:hover img { transform: scale(1.1); }
+
+/* 3.( كرت الخصم المقسم ) */
+.promo-banner {
+    display: flex; background: #E1C1B6; margin-bottom: 60px;
+    border-radius: 25px; overflow: hidden; height: 350px; border: 1px solid #b8b2aa; flex-direction:row ;
+}
+.promo-content { flex: 1; padding: 50px; display: flex; flex-direction: column; justify-content: center; text-align:left ; }
+.sale-tag { color: #8E7E73; font-weight: bold; margin-bottom: 15px; font-size: 20PX; }
+.promo-content h2 { color: #6D3A3C; font-size: 38px; margin-bottom: 15px; }
+.highlight { color: #F9F6F1; }
+.promo-content p { color: #EEE4DA; margin-bottom: 30px; font-size: 18px; }
+/* .shop-btn {
+    width: fit-content; padding: 14px 45px;
+    background: #D8C4AC; color: #400E13; border: none;
+    border-radius: 12px; font-weight: 800; cursor: pointer; transition: 0.3s;
+} */
+
+.shop-btn {
+    width: 280px; 
+    
+    padding: 15px 0; 
+    
+    background: #6D3A3C;
+    color: #F9F6F1;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 18px; 
+    cursor: pointer;
+    transition: 0.3s;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; }
+
+/* تأثير عند تمرير الماوس على الزر */
+.shop-btn:hover {
+    background: #c9b399;
+    transform: scale(1.03); /* تكبير بسيط جداً عند اللمس */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.promo-image { flex: 1; }
+.promo-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 4. كروت المنتجات (6 لكل قسم - عريضة ومتناسقة) */
+.products-area { margin-bottom: 80px; }
+.area-title { font-size: 28px; border-left: 7px solid #D8C4AC; padding-left: 15PX ;  text-align: left ; margin-bottom: 45px;  color:#6D3A3C ; }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 في الصف ليكون العرض مثالياً */
+    gap: 35px;
+}
+
+.product-card {
+    background: #FFFFFF; border-radius: 25px; padding: 20px;
+    border: 1px solid #E1C1B6; transition: 0.4s;
+    max-width: 380px; margin: 0 auto; width: 100%;text-align: left;
+    display: flex; flex-direction: column;
+}
+.product-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(64,14,19,0.12); }
+
+.card-img { position: relative; width: 100%; aspect-ratio: 16 / 13; overflow: hidden; border-radius: 18px; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.heart-icon {
+    position: absolute; top: 12px; right: 12px;
+    background: white; padding: 10px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.heart-icon svg { width: 22px; fill: #E1C1B6; transition: 0.3s; cursor: pointer; }
+.heart-icon:hover svg { fill: #6D3A3C; transform: scale(1.2); }
+
+.card-info { padding-top: 15px; flex-grow: 1; text-align:left ;}
+.stars { color: #FFD700; margin-bottom: 10px; font-size: 15px; }
+.card-info h3 { font-size: 20px; margin-bottom: 10px; color: #8E7E73; font-weight: 700; }
+.desc { font-size: 14px; color: #b8b2aa; margin-bottom: 15px; line-height: 1.5; height: 42px; overflow: hidden; }
+.price { display: block; font-size: 24px; font-weight: 800; color: #8E7E73; margin-bottom: 20px; }
+
+.add-cart {
+    width: 100%; padding: 14px; background: #6D3A3C;
+    color: #F9F6F1; border: none; border-radius: 15px;
+    font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s;
+}
+.add-cart:hover { background: #8E7E73; }
+
+/* التوافق مع الشاشات */
+@media (max-width: 992px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .products-grid { grid-template-columns: repeat(1, 1fr); } .quick-nav { flex-direction: column; } }
+
+    </style>
+</head>
+<body>
+     <nav>
+    <h1>Aura Beauty</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="acc"><a href="#account">Account</a></li>
+     
+    </ul>
+  </nav>
+
+    <section class="main-hero">
+        <div class="hero-inner">
+            <h1>Product Especially For You</h1>
+        </div>
+    </section>
+
+    <div class="wrapper">
+        
+        <div class="quick-nav">
+            <a href="#hair-section" class="nav-card">
+                <img src="كريم شعر .jpeg" alt="">
+                <div class="nav-overlay"><span>Hair Care Product</span></div>
+            </a>
+            <a href="#makeup-section" class="nav-card">
+                <img src="B2.jpeg" alt="">
+                <div class="nav-overlay"><span>Make-up Product</span></div>
+            </a>
+            <a href="#nails-section" class="nav-card">
+                <img src="خلفية المناكير .jpeg" alt="">
+                <div class="nav-overlay"><span >Manicure Product</span></div>
+            </a>
+        </div>
+
+        <section class="promo-banner">
+            <div class="promo-content">
+                <span class="sale-tag">Season Offers</span>
+                <h2>Discount Up To <span class="highlight">50%</span></h2>
+                <p>Enjoy the best products at fantastic price for a limited time </p>
+                <button class="shop-btn">Shoping Now</button>
+            </div>
+            <div class="promo-image">
+                <img src="bdescount.jpeg" alt="خصومات">
+            </div>
+        </section>
+         
+        <section id="makeup-section" class="products-area">
+            <h1 class="area-title">Hair Care Product</h1>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="card-img"><img src="منتج1.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Royal Argan Golden Serum</h3><p class="desc"> An opulent blend of pure Moroccan Argan oil designed to tame frizz, seal split ends, and provide a majestic shine.
+
+</p><span class="price">60$ </span><button class="add-cart">Add to Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="معالج شعر .jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Protein Mask</h3><p class="desc">A deep-conditioning treatment that reinforces hair structure, restores elasticity, and protects against heat damage.
+
+</p><span class="price">54$</span><button class="add-cart">Add to Cart </button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="كيراتين.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★☆</div><h3>Keratin serum</h3><p class="desc"> Gently cleanses while infusing hair with essential keratin proteins for a sleek, salon-quality finish and effortless manageability.
+
+</p><span class="price">65$</span><button class="add-cart"> Add to Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="سيروم1.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Shine Spray</h3><p class="desc"> A weightless finishing spray that provides an immediate luminous glow and UV protection without any greasy residue.</p><span class="price">50$</span><button class="add-cart"> Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="مجموعة عناية شعر .jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★☆</div><h>Coconut Conditioner</h3><p class="desc">Enriched with organic coconut milk to deeply detangle, soften strands, and leave your hair with a tropical, healthy scent.
+</p><span class="price">78$ </span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="زيت.jpg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Hair Oil</h3><p class="desc">A multi-purpose therapeutic oil that nourishes the scalp and strengthens the hair follicle for thicker, healthier-looking hair.
+</p><span class="price">30$</span><button class="add-cart">Add To Cart</button></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="makeup-section" class="products-area">
+            <h1 class="area-title">Make-up Product</h1>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="card-img"><img src="منتج3.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Lip Gloss</h3><p class="desc">A non-sticky, high-shine formula infused with Jojoba oil to provide long-lasting hydration and a plump, glass-like finish.
+</p><span class="price">8$ </span><button class="add-cart">Add to Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="ظلال عيون.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Eyeshadow Palette</h3><p class="desc">A stunning collection of 12 highly-pigmented matte and shimmer shades, designed for effortless blending and professional eye looks.
+</p><span class="price">54$</span><button class="add-cart">Add to Cart </button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="احمر خدود.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★☆</div><h3>Liquid Blush</h3><p class="desc"> A creamy, easy-to-blend formula that melts into the skin for a natural, healthy flush of color that lasts all day.
+</p><span class="price">27$</span><button class="add-cart"> Add to Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="منتج5.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Mascara</h3><p class="desc"> A jet-black, smudge-proof formula with a precision brush that coats every lash for dramatic volume and incredible length.</p><span class="price">50$</span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="بودرة .jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★☆</div><h>Powder</h3><p class="desc">An ultra-fine, weightless powder that blurs imperfections, controls shine, and sets your makeup for a seamless, 12-hour wear.</p><span class="price">30$ </span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="كريم اساس .jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Foundation</h3><p class="desc">A lightweight, breathable liquid foundation that provides buildable medium-to-full coverage with a natural, skin-like radiant finish.</p><span class="price">65$</span><button class="add-cart">Add To Cart</button></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nails-section" class="products-area">
+            <h1 class="area-title">Manicure Product &  Tool</h1>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="card-img"><img src="منتج مناكير 2.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Pearl Polish</h3><p class="desc">  A dreamy, luminous polish that catches the light with a soft pearlescent glow for a sophisticated and timeless look.</p><span class="price">16$ </span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="منتج مناكير 4.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Standard Polish</h3><p class="desc"> A professional-grade, chip-resistant formula available in a variety of rich, opaque colors with a brilliant mirror-like finish.
+</p><span class="price">14$ </span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="مزيل مناكير.jpg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★☆</div><h3>Nail Polish Remover</h3><p class="desc">An acetone-free formula that effectively removes polish while nourishing the nails and cuticles with rose water and Vitamin E.
+</p><span class="price">20$</span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="مقوي اظافر .jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Strengthening Serum</h3><p class="desc">A powerful therapeutic serum designed to fortify weak nails, prevent breakage, and stimulate healthy, fast growth.
+</p><span class="price">45$</span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="مبرد.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★★</div><h3>Crystal File</h3><p class="desc">Crafted from high-quality tempered glass to gently shape nails without causing splitting or peeling. Durable and easy to clean.
+</p><span class="price">10$</span><button class="add-cart">Add To Cart</button></div>
+                </div>
+                <div class="product-card">
+                    <div class="card-img"><img src="منتج مناكير 5.jpeg" alt=""><div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>
+                    <div class="card-info"><div class="stars">★★★★☆</div><h3>Complete Care Set</h3><p class="desc">An all-in-one professional set featuring essentials for shaping, smoothing, and hydrating your nails for a salon-quality result at home.
+</p><span class="price">65$ </span><button class="add-cart">Add To Cart</button></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
+</body>
+</html>
