@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fcf6f6; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+header {
+    background-color: #984f5b; 
+    color: white;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-title-area {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    padding: 20px 20px; 
+    text-align: center;
+}
+.main-title-area h1 {
+    color: #4a1a1a; 
+    margin-bottom: 10px;    
+}
+.main-title-area p {
+    color: #a88a8a;    
+    font-size: 1.1rem;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    color: #551532;
+font-size: 20px;
+padding: 10px;
+transition: 0.3px;
+    text-decoration: none;
+}
+nav ul li a.active {
+   background-color: #dcc4cf;
+   border-radius: 40px;
+}
+.services-header {
+   color: #ffffff;
+}
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 50px;
+}
+.card {
+    background-color: #984f5b;
+    border-radius: 20px;
+    width: 280px;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(128,96,109);
+    transition: 0.4s;
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+.card-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;   
+}
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #e8d5d5;
+    margin-bottom: 20px;
+}
+.btn {
+    background-color: #fcf6f6;
+    color: #4a1a1a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #d1b1b1;
+}
+footer {
+    background-color: #4a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+.brands-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fcf6f6;
+}
+.brands-section h3 {
+    color: #4a1a1a;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+.brands-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    opacity: 0.7; 
+}
+.brand-name {
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', serif; 
+    color: #984f5b;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.section-title {
+    text-align: center;
+    color: #4a1a1a;
+    margin-bottom: 40px;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup services  - Aura Beauty</title>
+    
+<body>
+    <header>
+        <div class="logo">Aura Beauty</div>
+        <nav>
+     <ul>
+        <li><a href="#">Main</a></li>
+        <li><a  href="#"> hair</a></li>
+        <li><a  href="#" class="active">The Makeup</a></li>
+        <li><a href="#"> nails</a></li>
+        <li><a href="#">  products</a></li>
+     </ul>
+    </nav> 
+    </header>
+    <section class="main-title-area">
+                     <h1>Professional makeup services  </h1>
+
+
+                     <br>
+              <p> Enhance your natural Beauty with the best interational makeup tools   </p>
+    </section>
+     <main class="services-container">
+        <div class="card">
+            <div class="card-image">
+                <img src="ber.jpeg"="Bridal makeup">
+            </div>
+            <div class="card-content">
+                <h3> Bridal makeup</h3>
+                <p> A regal, charming look for your unforgettable night</p>
+                     <P> price:1500 SR
+                </p>
+                <button class="btn">Book now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="es.jpeg"="Evening makeup">
+            </div>
+            <div class="card-content">
+                <h3>Evening makeup</h3>
+                <p> Glow with a striking look for your special occasions </p>
+                    <P>  price:450 SR    </p>
+                <button class="btn">Book now </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="ev.jpeg"=" soft makeup ">
+            </div>
+            <div class="card-content">
+                <h3>soft makeup (Soft)</h3>
+               <p>Subtle touches to enhance your natural beauty</p>
+               <P> price:250 SR
+               </p>
+                <button class="btn">Book now</button>
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-image">
+                <img src="so.jpeg"="Evening makeup">
+            </div>
+            <div class="card-content">
+                <h3>escort makeup</h3>
+                <p>An elegant and balanced look for a special guest</p>
+                    <P> price:350 SR
+                </p>
+                <button class="btn">Book now </button>
+            </div>
+        </div>
+       </main> 
+<section class="brands-section">
+    <h3>Brands we use  </h3>
+    <div class="brands-container">
+        <span class="brand-name">MAC</span>
+        <span class="brand-name">Sephora</span>
+        <span class="brand-name">Dior</span>
+        <span class="brand-name">Chanel</span>
+        <span class="brand-name">Huda Beauty</span>
+    </div>
+</section>
+</body>
+</html>
