@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Aura beauty | Manicure & Care</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family:  'Cairo', sans-serif;
     }
 
     body {
-      font-family: Arial;
-      background:linear-gradient(135deg, #e7d4befe, #fff3e8);
-      color:  #8E7E73;
+      background:#F9F6F1;
+      color: #8E7E73;
     }
+    html { scroll-behavior: smooth; }
     nav {
       display: flex;
       justify-content: space-between;
@@ -73,9 +75,10 @@
 
     header h1 {
       z-index: 2;
-      font-size: 4rem;
+      font-size: 42px;
       color: whitesmoke;
       text-align: center;
+      width: 800;
     }
 
     .types {
@@ -145,10 +148,11 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      border: 1px solid #E1C1B6
     }
 
     .item:hover {
-      transform: translateY(-10px);
+      transform: translateY(-12px);
     }
 
     .item img {
@@ -180,22 +184,28 @@
     }
 
     button {
-      padding: 18px 20px; 
+      padding: 15px 0px; 
       border: none;
-      background: rgb(135, 55, 59);
-      color: white;
-      border-radius: 10px;
+      background: #6D3A3C;
+      color: #F9F6F1;
+      border-radius: 12px;
       cursor: pointer;
       transition: all 0.3s;
-      font-weight: bold;
-      font-size: 1.2rem;
-      width: 100%;
+      font-size: 18px;
+      /*width: 100%;*/
       margin-top: 10px;
+      font-weight: 800;
+      justify-content: center;
+      align-items: center;
+      display: flex;
     }
     
     button:hover{
-        background: black;
-        transform: scale(1.02);
+        /*background: black;
+        transform: scale(1.02);*/
+     background: #c9b399;
+     transform: scale(1.03); /* تكبير بسيط جداً عند اللمس */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -230,15 +240,15 @@
 </header>
 
 <section class="types">
-  <a href="#manicure" class="card">
+  <a href="#treatment" class="card">
     <img src="t2.jpg">
     <h3>Hand Spa Treatments</h3>
   </a>
-  <a href="#spamanicure" class="card">
+  <a href="#classic" class="card">
     <img src="cm.jpg">
     <h3>Classic Manicure</h3>
   </a>
-  <a href="#nails" class="card">
+  <a href="#advanced" class="card">
     <img src="am.jpg">
     <h3>Advanced Manicure</h3>
   </a>
@@ -248,7 +258,7 @@
   </a>
 </section>
 
-<section id="manicure" class="details">
+<section id="treatment" class="details">
   <h2>Hand Spa Treatments</h2>
   <div class="items">
     <div class="item">
@@ -277,7 +287,7 @@
   </div>
 </section>
 
-<section id="spamanicure" class="details">
+<section id="clissic" class="details">
   <h2>Classic Manicure</h2>
   <div class="items">
     <div class="item">
@@ -305,7 +315,7 @@
   </div>
 </section>
 
-<section id="nails" class="details">
+<section id="advanced" class="details">
   <h2>Advanced Manicure</h2>
   <div class="items">
     <div class="item">
