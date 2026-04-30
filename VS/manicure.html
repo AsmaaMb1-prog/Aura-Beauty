@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aura beauty | Manicure & Care</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      background:linear-gradient(135deg, #e7d4befe, #fff3e8);
+      color:  #8E7E73;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 50px;
+      background-color: #984f5b;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+
+    nav h1 {
+      color:  #ffffff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #551532;
+      font-weight: 400px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    header {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(bg.jpeg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      z-index: 2;
+      font-size: 4rem;
+      color: whitesmoke;
+      text-align: center;
+    }
+
+    .types {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 80px 10px 60px 10px;
+    }
+
+    .card {
+      width: 300px; 
+      height: 340px;
+      text-decoration: none;
+      color:#8E7E73;
+      background:#F1F9F6;
+      border-radius: 15px;
+      overflow: hidden; 
+      box-shadow: 0 5px 10px rgba(218, 203, 203, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+       box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .details {
+      padding: 60px 20px; 
+    }
+
+    .details h2 {
+      margin-bottom: 30px;
+      text-align: left;
+      font-size: 2.8rem;
+      color: #8E7E73;
+      border-left: 5px solid #B8842C ;
+      padding-left: 15px;
+    }
+
+    .items {
+      display: flex;
+      gap: 40px; 
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .item {
+      width: 350px; 
+      min-height: 500px; 
+      border-radius: 12px;
+      padding: 15px; 
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      background: white;
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .item:hover {
+      transform: translateY(-10px);
+    }
+
+    .item img {
+      width: 100%;
+      height: 220px; 
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .item h3 {
+      font-size: 1.4rem; 
+      margin: 10px 0;
+    }
+    
+    .item p{
+        text-align: center;
+        padding: 5px 0;
+        font-size: 1.1rem; 
+        line-height: 1.4;
+    }
+
+    .item span {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 1.5rem; 
+      color: #984f5b;
+    }
+
+    button {
+      padding: 18px 20px; 
+      border: none;
+      background: rgb(135, 55, 59);
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    button:hover{
+        background: black;
+        transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background:#984f5b ;
+      color: #ffffff;
+      margin-top: 60px;
+    }
+
+    footer a{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Aura Beauty</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="acc"><a href="#account">Account</a></li>
+    </ul>
+  </nav>
+
+<header>
+  <h1>Manicure</h1>
+</header>
+
+<section class="types">
+  <a href="#manicure" class="card">
+    <img src="t2.jpg">
+    <h3>Hand Spa Treatments</h3>
+  </a>
+  <a href="#spamanicure" class="card">
+    <img src="cm.jpg">
+    <h3>Classic Manicure</h3>
+  </a>
+  <a href="#nails" class="card">
+    <img src="am.jpg">
+    <h3>Advanced Manicure</h3>
+  </a>
+  <a href="#additional" class="card">
+    <img src="wax.jpg">
+    <h3>Additional Services</h3>
+  </a>
+</section>
+
+<section id="manicure" class="details">
+  <h2>Hand Spa Treatments</h2>
+  <div class="items">
+    <div class="item">
+      <img src="hs.jpg">
+      <h3>Hand Soaking with essential oils</h3>
+      <p>A relaxing soak that softens the skin and prepares hands for deeper care</p>
+      <span>30 SAR</span>
+      <button>Book Now</button>
+    </div>
+
+    <div class="item">
+      <img src="hsb2.jpg">
+      <h3>Gentle Exfoliating Scrub</h3>
+      <p>Removes dead skin cells, leaving your hands smooth and refreshed</p>
+      <span>50 SAR</span>
+      <button>Book Now</button>
+    </div>
+
+    <div class="item">
+      <img src="dmm.jpg">
+      <h3>Deep Moisturizing Mask</h3>
+      <p>Intensively hydrates dry skin and restores softness</p>
+      <span>60 SAR</span>
+      <button>Book Now</button>
+    </div>
+  </div>
+</section>
+
+<section id="spamanicure" class="details">
+  <h2>Classic Manicure</h2>
+  <div class="items">
+    <div class="item">
+      <img src="nst.jpg">
+      <h3>Nail Shaping & Trimming</h3>
+      <p>Professional cutting and shaping to suit your nail style</p>
+      <span>80 SAR</span>
+      <button>Book Now</button>
+    </div>
+
+    <div class="item">
+      <img src="nc.jpg">
+      <h3>Cuticle Care</h3>
+      <p>Gentle cleaning and care for healthy nail growth.</p>
+      <span>100 SAR</span>
+      <button>Book Now</button>
+    </div>
+    <div class="item">
+      <img src="rn.jpg">
+      <h3>Regular Nail Polish</h3>
+      <p>Application of your favorite color with a clean finish..</p>
+      <span>80 SAR</span>
+      <button>Book Now</button>
+    </div>
+  </div>
+</section>
+
+<section id="nails" class="details">
+  <h2>Advanced Manicure</h2>
+  <div class="items">
+    <div class="item">
+      <img src="gm.jpg">
+      <h3>Gel Manicure</h3>
+      <p>Long-lasting, glossy polish that resists chipping.</p>
+      <span>120 SAR</span>
+      <button>Book Now</button>
+    </div>
+
+    <div class="item">
+      <img src="fm.jpg">
+      <h3>French Manicure</h3>
+      <p>Elegant, natural-looking nails with white tips.</p>
+      <span>140 SAR</span>
+      <button>Book Now</button>
+    </div>
+
+    <div class="item">
+      <img src="am2.jpg">
+      <h3>Nail Art & Designs</h3>
+      <p>Custom designs to match your style and occasion.</p>
+      <span>90 SAR</span>
+      <button>Book Now</button>
+    </div>
+  </div>
+</section>
+
+<section id="additional" class="details">
+  <h2>Additional Services</h2>
+  <div class="items">
+    <div class="item">
+      <img src="nr.jpg">
+      <h3>Nail Polish Removal</h3>
+      <p>Safe removal without damaging natural nails</p>
+      <span>40 SAR</span>
+      <button>Book Now</button>
+    </div>
+
+    <div class="item">
+      <img src="ns.jpg">
+      <h3>Nail Strengthening Treatment</h3>
+      <p>Helps weak or brittle nails grow stronger</p>
+      <span>50 SAR</span>
+      <button>Book Now</button>
+    </div>
+
+    <div class="item">
+      <img src="wax.jpg">
+      <h3>Paraffin Wax Treatment</h3>
+      <p>Deep hydration treatment that leaves hands soft and smooth</p>
+      <span>60 SAR</span>
+      <button>Book Now</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <h3>© 2026 Aura Beauty Salon | All Rights Reserved</h3>
+    <br>
+    <h4>Working hours :</h4>
+    <p> Sat-Thu : 10 AM - 8 PM</p>
+    <br>
+    <h4>Contact</h4>
+    <p>77800000 | aurabeauty@gmail.com</p>
+    <br>
+    <a href="#">Privacy and Policy</a> | <a href="#">Terms and Conditions</a>
+</footer>
+
+</body>
+</html>
