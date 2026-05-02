@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AURA BEAUTY</title>
+   <style>
+    body{
+    margin: 0;
+    font-family:Arial;
+    background-color: #fcf5ee;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color: #984f5b;
+  position:static;
+  top: 0;
+}
+
+nav h1 {
+  color:  #ffffff;
+;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #551532;
+  font-size: 20px;
+  transition: 0.3s;
+  padding: 10px;
+  
+}
+li.acc{
+  background-color: #dcc4cf;
+  border-radius: 40px;
+ 
+}
+
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+.service{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.service h2{
+    color: #7a6a61;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    justify-content: center;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #fff;
+    border-radius: 15px;
+    width: 300px;
+    padding-bottom: 15px;
+    transition: 0.4s ease;
+}
+.card img{
+    width: 300px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card:hover {
+    transform:translateY(-10px) scale(1.08);
+}
+.card h3{
+    margin: 15px 0 5px;
+    color: #6d5c54;
+}
+.card p {
+    color: #8a7c74;
+    font-size: 14px;
+    padding-bottom: 20 px;
+}
+.s-1{
+    object-position: 40% 35%;
+}
+.s-2{
+    object-position: 40% 35%;
+}
+.s-3{
+    object-position: 40% 26%;
+}
+.s-4{
+    object-position: 40% 26%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+p{
+    padding: 10px;
+}
+button{
+    padding: 12px 30px;
+    background-color: rosybrown;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+footer {
+  text-align: center;
+ padding: 3px;
+  background:#984f5b ;
+  color: #ffffff;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+  footer a{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+   </style>
+</head>
+<body>
+  
+          <nav>
+    <h1>Aura Beauty</h1>
+    <ul>
+      <li><a href="safia.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="acc"><a href="LOGIN.html">Account</a></li>
+     
+    </ul>
+  </nav>
+  
+    <section class="service">
+        <h2>Our Hair Services</h2>
+        <div class="cards">
+            <div class="card">
+                <a href="#styling">
+                    <img src="h5.jpg" class="s-1">
+                </a>
+                <h3>Hair Cut & Styling </h3>
+                <p>Trendy cuts and elegant styles for every occasion</p>
+            </div>
+            <div class="card">
+                <a href="#treatment">
+                    <img src="h6.jpg" class="s-2">
+                </a>
+                <h3>Hair Treatments</h3>
+                <p>Deep care for healthy and shiny hair</p>
+            </div>
+            <div class="card">
+                <a href="#color">
+                    <img src="h2.jpg" class="s-3">
+                </a>
+                <h3>Hair Coloring</h3>
+                <p>Luxury coloring services with premium products</p>
+            </div>
+        </div>
+    </section>
+    <section class="service"  id="styling">
+        <h2>Hair Cut & Styling</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="h13.jpg" class="s-4">
+                <h3>Hairstyling</h3>
+                <h4>Price:50 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+            <div class="card">
+                <img src="h16.jpg">
+                <h3>Blowout Hair</h3>
+                <h4>Price:30-50 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+            <div class="card">
+                <img src="h7.jpg">
+                <h3>Haircut</h3>
+                <h4>Price:20-30 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+        </div>
+    </section>
+    <section class="service"  id="treatment">
+        <h2>Hair Treatments</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="h21.jpg">
+                <h3>Keratin Treatment</h3>
+                <h4>Price:40-60 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+            <div class="card">
+                <img src="h20.jpg">
+                <h3>Scalp Detox</h3>
+                <h4>Price:30 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+            <div class="card">
+                <img src="h19.jpg">
+                <h3>Olaplex Repair</h3>
+                <h4>Price:45 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+        </div>
+    </section>
+    <section class="service"  id="color">
+        <h2>Hair Coloring</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="h9.jpg">
+                <h3>Full Color</h3>
+                <h4>Price:30-40 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+            <div class="card">
+                <img src="h10.jpg">
+                <h3>Highlights</h3>
+                <h4>Price:25 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+            <div class="card">
+                <img src="h20.jpg">
+                <h3>Toner</h3>
+                <h4>Price:20 SR</h4>
+                <button class="buttons">Book now</button>
+            </div>
+        </div>
+    </section>
+         <footer>
+ <h3><b>© 2026 Aura Beauty Salon | All Rights Reserved</b></h3>
+  <h3>Working hours :</h3></h3>
+  <p> Sat-Thu : 10 AM-8PM</p>
+ <h4>Contact</h4>
+    <p>77800000 | aurabeauty@gmail.com</p>
+  <a href="#">Privacy and Policy</a> |
+<a href="#">Terms and Conditions</a></p>
+  </footer>
+
+</body>
+</html>
