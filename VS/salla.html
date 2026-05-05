@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart & Wishlist</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    margin:0 ;
+    padding: 0;
+}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 50px;
+            background-color: #984f5bd4;
+            position: static;
+            top: 0;
+          }
+
+          nav h1 {
+            color: #ffffff;
+            letter-spacing: 2px;
+          }
+
+          nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+          }
+
+          nav ul li a {
+            text-decoration: none;
+            color: #551532;
+            font-weight: 400;
+            transition: 0.3s;
+          }
+          li.acc {
+            background-color: #dcc4cf;
+            border-radius: 40px;
+            padding: 4px;
+          }
+
+          nav ul li a:hover {
+            color: #ffffff;
+          }
+          body{
+            background-color: #f9f6f1;
+          }
+
+/* الحاوية في المنتصف وبعرض عريض قليلاً (65%) */
+.main-container {
+    width: 60%; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+/* العنوان مع الخط الجانبي */
+.section-title {
+    border-left: 5px solid #4d0e13;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    margin-top: 35px;
+}
+
+.section-title h2 {
+    font-size: 22px;
+    color: #8e7e73;
+    letter-spacing: 1px;
+}
+
+/* مجموعة المنتجات لترتيبها تحت بعض */
+.products-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* المسافة بين كل مستطيل والآخر */
+    margin-bottom: 40px;
+}
+
+/* تصميم المستطيل (الكرت) - رشيق وعريض */
+.product-card {
+    background: #c8a49f;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px; /* تباعد قليل لجعله أنحف */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid #d8c4ac;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+}
+
+
+.product-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.heart-icon-overlay {
+    position: absolute;
+    top: -5px;      
+    right: -5px;    
+    width: 28px;   
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.heart-icon-overlay svg {
+    width: 18px;    /* حجم القلب نفسه */
+    height: 18px;
+    fill: #e74c3c;  /* تلوين مسار SVG باللون الأحمر */
+}
+
+.p-img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* معلومات المنتج في الوسط */
+.p-info {
+    flex: 2;
+    padding: 0 25px;
+}
+
+.p-info h3 {
+    font-size: 17px;
+    color: #4d0e13;
+    margin-bottom: 12px;
+}
+
+.p-info p {
+    font-size: 12px;
+    color: #6d3a3c;
+    line-height: 1.4;
+}
+
+.price {
+    display: block;
+    margin-top: 50px;
+    font-weight: bold;
+    color: #26a85c;
+}
+
+/* التحكم (يمين المستطيل) */
+.p-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+/* صندوق زيادة ونقص العدد */
+.qty-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #4d0e13;
+    border-radius: 6px;
+    background: #d8C4AC;
+}
+
+.qty-box button {
+    padding: 4px 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.qty-box span {
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/* ملخص الطلب */
+.order-summary-box {
+    background: #d8C4AC;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #4d0e13;
+}
+
+.summary-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4d0e13;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.item-count{
+    color:#7f8c8d ;
+    font-weight:500 ;
+    font-size: 15px;
+}
+.promo-input, .pay-select {
+    padding: 8px 12px;
+    border: 1px solid #4d0e13;
+    border-radius: 6px;
+    width: 220px;
+}
+
+.total {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4d0e13;
+    margin-top: 10px;
+}
+
+.pay-now-btn {
+    width: 100%;
+    padding: 15px;
+    background: #269052;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.pay-now-btn:hover {
+    background: #27ae60;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <nav> 
+    <h1>Aura Beauty</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="acc"><a href="#account">Account</a></li>
+     
+    </ul>
+   </nav>
+
+    <div class="main-container">
+        
+        <!-- قسم المنتجات ( Products in cart) -->
+        <div class="section-title">
+            <h2> Products in Cart</h2>
+        </div>
+
+        <div class="products-group">
+            <!-- كرت منتج 1 -->
+            <div class="product-card">
+                <img src="ظلال عيون.jpeg" alt="product" class="p-img">
+                <div class="p-info">
+                    <h3>Eyeshadow Palette</h3>
+                    <p>A stunning collection of 12 highly-pigmented matte and
+                     shimmer shades, designed for effortless blending and professional eye looks.   .</p>
+                    <span class="price">54 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- كرت منتج 2 -->
+            <div class="product-card">
+                <img src="سيروم1.jpeg" alt="product" class="p-img">
+                <div class="p-info">
+                    <h3>Shine Spray</h3>
+                    <p>A weightless finishing spray that provides an immediate
+                       luminous glow and UV protection without any greasy residue. .</p>
+                    <span class="price">50 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- كرت منتج 3 -->
+            <div class="product-card">
+                <img src="مبرد.jpeg" alt="product" class="p-img">
+                <div class="p-info">
+                    <h3>Crystal File</h3>
+                    <p>
+ Crafted from high-quality tempered glass to gently shape nails without causing splitting or peeling. Durable and easy to cline</p>
+                    <span class="price">10 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <!-- كرت منتج 4 -->
+            <div class="product-card">
+                <img src="كريم اساس .jpeg" alt="product" class="p-img">
+                <div class="p-info">
+                    <h3>Foundation</h3>
+                    <p>A lightweight, breathable liquid foundation that provides
+                        buildable medium-to-full coverage with a natural, skin-like radiant finish.
+                    </p>
+                    <span class="price"> 65 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم المفضلة (Favorites) -->
+        <div class="section-title">
+            <h2>Favorites</h2>
+        </div>
+
+        <div class="products-group">
+            <!-- مفضلة 1 -->
+            <div class="product-card">
+        <div class="product-image-container">
+             <div class="heart-icon-overlay">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+         </div>
+                <img src="كيراتين.jpeg" alt="product" class="p-img">
+                </div>
+                <div class="p-info">
+                    <h3>Keratin serum</h3>
+                    <p>Gently cleanses while infusing hair with essential keratin proteins for a sleek, 
+                        salon-quality finish and effortless manageability.</p>
+                    <span class="price">45 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- مفضلة 2 -->
+            <div class="product-card">
+                    <div class="product-image-container">
+                             <div class="heart-icon-overlay">
+                                 <svg viewBox="0 0 24 24">
+                                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                 </svg>
+                             </div>
+                            <img src="احمر خدود.jpeg" alt="product" class="p-img">
+                    </div>
+                <div class="p-info">
+                    <h3>Liquid Blush</h3>
+                    <p>A creamy, easy-to-blend formula that melts into the skin for
+                        a natural, healthy flush of color that lasts all day.
+                    </p>
+                    <span class="price">27 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- مفضلة 3 -->
+            <div class="product-card">
+<div class="product-image-container">
+    <div class="heart-icon-overlay">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+    </div>
+    <img src="زيت.jpg" alt="product" class="p-img">
+</div>
+                    <div class="p-info">
+                    <h3>Hair Oil</h3>
+                    <p>
+                         A multi-purpose therapeutic oil that nourishes the scalp and
+                         strengthens the hair follicle for thicker, healthier-looking hair.</p>
+                    <span class="price">30 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- مفضلة 4 -->
+            <div class="product-card">
+<div class="product-image-container">
+    <div class="heart-icon-overlay">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+    </div>
+    <img src="منتج مناكير 5.jpeg" alt="product" class="p-img">
+</div>
+                <div class="p-info">
+                    <h3>Complete Care Set</h3>
+                    <p>An all-in-one professional set featuring essentials for shaping, smoothing,
+                         and hydrating your nails for a salon-quality result at home.</p>
+                    <span class="price"> 65 SR</span>
+                </div>
+                <div class="p-controls">
+                    <div class="qty-box">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- ملخص الطلب -->
+        <div class="order-summary-box">
+            <div class="summary-header">Order info</div>
+            <div class="summary-details">
+                <div class="row">
+                    <span>Subtotal:</span>
+                    <span>179 SR</span>
+                </div>
+                <div class="row">
+                    <span>Produts count :</span>
+                    <span class="item-count">4 Products </span>
+                </div>
+                <div class="row">
+                    <span>Discount Code:</span>
+                    <input type="text" placeholder="Enter Code" class="promo-input">
+                </div>
+                <div class="row">
+                    <span>Payment Method:</span>
+                    <select class="pay-select">
+                        <option>Cash on Delivery</option>
+                        <option>Credit Card</option>
+                        <option>Al-Omqy Bank</option>
+                    </select>
+                </div>
+                <hr>
+                <div class="row total">
+                    <span>Total:</span>
+                    <span>179 SR</span>
+                </div>
+            </div>
+            <button class="pay-now-btn">PAY NOW</button>
+        </div>
+
+    </div>
+</body>
+</html>
+</body>
+</html>
+</body>
+</html>
