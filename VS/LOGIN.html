@@ -118,7 +118,7 @@ select:not(.multi-select) {
 .confirm-booking-btn {
     width: 100%; 
     padding: 18px; 
-    background: #E1C1B6; 
+    background: #6D3A3C; 
     color: #FFFFFF; 
     border: none;
     border-radius: 12px; 
@@ -128,15 +128,18 @@ select:not(.multi-select) {
     transition: 0.3s;
 }
 .confirm-booking-btn:hover { 
-    background: #7A6D64; 
-    box-shadow: 0 10px 20px rgba(142, 126, 115, 0.2);
+    /* background: #7A6D64;  */
+    /* box-shadow: 0 10px 20px rgba(142, 126, 115, 0.2); */
+     background: #c9b399;
+     transform: scale(1.03); /* تكبير بسيط جداً عند اللمس */
+   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* --- واجهة الملخص --- */
-.summary-view { text-align: center; }
+.summary-view { text-align: center;  }
 .check-icon {
     width: 65px; height: 65px; 
-    background: #E1C1B6; 
+    background: #6D3A3C; 
     color: #FFFFFF;
     border-radius: 50%; 
     display: flex; 
@@ -161,12 +164,16 @@ select:not(.multi-select) {
     padding: 25px; 
     border-radius: 18px;
     margin-bottom: 30px; 
+    margin-top: 10px;
     text-align: left; 
     border: 1px solid #E1C1B6;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+           transition: transform 0.4s ease;
+
 }
 .summary-item { 
    
-    margin-bottom: 12px; 
+    margin-bottom: 18px; 
     border-bottom: 1px solid #E1C1B6; 
     padding-bottom: 8px; 
     font-size: 14px; 
@@ -191,13 +198,17 @@ select:not(.multi-select) {
     font-weight: 700;
     text-transform: uppercase; 
     cursor: pointer; 
-    transition: 0.3s;
+    /* transition: 0.3s; */
+     transition: transform 0.4s ease; 
+
 }
 
 .back-home-btn {
     background: transparent; 
     color: #8E7E73; 
     border: 2px solid #D6BD9F;
+     transition: transform 0.4s ease;
+
 }
 .back-home-btn:hover { background: #D6BD9F; color: white; }
 
@@ -205,6 +216,8 @@ select:not(.multi-select) {
     background: transparent; 
     color: #B8B2AA; 
     border: 2px solid #B8B2AA;
+     transition: transform 0.4s ease;
+
 }
 .cancel-booking-btn:hover { 
     background: #B8B2AA; 
@@ -213,13 +226,14 @@ select:not(.multi-select) {
 
 .close-btn {
     position: absolute; top: 20px; right: 20px; 
-    background: #F9F6F1; border: none;
+    background:#D6BD9F ; border: none;
     font-size: 24px; color: #8E7E73; 
     cursor: pointer; width: 35px; height: 35px; border-radius: 50%;
     display: flex; justify-content: center; align-items: center;
 }
 .close-btn:hover{
-    background-color: #E1C1B6;
+    background-color: #6D3A3C;
+    color: white;
 }
 
 .hidden { display: none; }
@@ -258,10 +272,10 @@ select:not(.multi-select) {
                     <div class="input-stack">
                         <select id="mainService" onchange="updateSubServices()" required>
                             <option value="" disabled selected>Select Category</option>
-                            <option value="hair">Hair Couture</option>
-                            <option value="makeup">Artistic Makeup</option>
-                            <option value="nails">Nail Artistry</option>
-                            <option value="spa">Wellness & Spa</option>
+                            <option value="hair">Hair </option>
+                            <option value="makeup"> Makeup</option>
+                            <option value="nails"> Manicure</option>
+                            <option value="spa"> Spa </option>
                         </select>
 
                         <div id="subServiceWrapper" class="hidden-fade" style="display: none; opacity: 0;">
@@ -321,10 +335,10 @@ select:not(.multi-select) {
         }
 
         const servicesData = {
-            hair: ["Couture Cut & Style", "Royal Color", "Hair Botox", "Blowout"],
+            hair: ["Hair Cut & Styling", "Hair Treatments", "Hair Coloring", ],
             makeup: ["Bridal Glam", "Evening Look", "Soft Glam"],
-            nails: ["Manicure", "Gel Extensions", "Nail Art"],
-            spa: ["Massage", "Hammam", "Facial"]
+            nails: ["Hand Spa Treatments", "Classic Manicure", "Additional Services"],
+            spa: ["Rejuvenating Facial", "Deep Tissue Massage", "Aura Ritual"]
         };
 
         function updateSubServices() {
