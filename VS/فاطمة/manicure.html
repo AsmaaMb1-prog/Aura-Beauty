@@ -6,6 +6,48 @@
     <title>Document</title>
      <link rel="stylesheet" href="aura.css">
     <style>
+      * { 
+    margin: 0; padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'cairo', sans-serif; 
+}
+body {
+  margin: 0;
+  background-color:#fae6cfd7;
+  line-height: 1.6;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color:#984f5b;
+  position:static;
+  top: 0;
+}
+
+nav h1 {
+  color:  #ffffff;
+;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #551532;
+  font-size: 20px;
+  transition: 0.3s;
+  padding: 10px;
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
 header{
       position: relative;
       width: 100vw;
@@ -13,7 +55,7 @@ header{
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url(back2.jpg);
+      background-image: url(b2.jpg);
       background-size: cover;
       background-position: center;  
 }
@@ -173,6 +215,21 @@ header h1 {
       margin: 20px;
       
     }
+    footer {
+  text-align: center;
+ padding: 3px;
+  background:#984f5b ;
+  color: #ffffff;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+  footer a{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
     </style>
 </head>
 <body>
