@@ -1,91 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Aura beauty | Manicure & Care</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family:  'Cairo', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="aura.css">
+    <style>
+      * { 
+    margin: 0; padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'cairo', sans-serif; 
+}
+body {
+  margin: 0;
+  background-color:#fae6cfd7;
+  line-height: 1.6;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color:#984f5b;
+  position:static;
+  top: 0;
+}
 
-    body {
-      background:#F9F6F1;
-      color: #8E7E73;
-    }
-    html { scroll-behavior: smooth; }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 50px;
-      background-color: #984f5b;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-      width: 100%;
-    }
+nav h1 {
+  color:  #ffffff;
+;
+  letter-spacing: 2px;
+}
 
-    nav h1 {
-      color:  #ffffff;
-      letter-spacing: 2px;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #551532;
-      font-weight: 400px;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ffffff;
-    }
-
-    header {
+nav ul li a {
+  text-decoration: none;
+  color: #551532;
+  font-size: 20px;
+  transition: 0.3s;
+  padding: 10px;
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
+header{
       position: relative;
       width: 100vw;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url(bg.jpg);
+      background-image: url(b2.jpg);
       background-size: cover;
-      background-position: center;
+      background-position: center;  
+}
+header h1 {
+      font-size: 70px;             /* تكبير الحجم ليكون بطل الصفحة */
+      color: #ffffff;              /* أبيض ناصع للتباين */
+      font-weight: 800;
+      letter-spacing: 10px;        /* مسافات واسعة تعطي شعور بالفخامة */
+      text-transform: uppercase;
+      padding: 20px 50px;
+      
+      
+      background: rgba(255, 255, 255, 0.1); 
+      backdrop-filter: blur(8px);  /* هذا السطر سيغبش صورة اليد خلف النص فقط */
+      -webkit-backdrop-filter: blur(8px);
+      
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      
+      /* لمنع النص من التمدد بشكل غريب */
+      display: inline-block;
+      width: auto; 
     }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-    }
-
-    header h1 {
-      z-index: 2;
-      font-size: 42px;
-      color: whitesmoke;
-      text-align: center;
-      width: 800;
-    }
-
     .types {
       display: flex;
       justify-content: center;
       gap: 15px;
-      padding: 80px 10px 60px 10px;
+      padding: 60px 20px;
     }
 
     .card {
@@ -115,23 +114,17 @@
       transform: translateY(-5px);
        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     }
-
-    .details {
-      padding: 60px 20px; 
-    }
+       
 
     .details h2 {
-      margin-bottom: 30px;
-      text-align: left;
+      text-align: center;
       font-size: 2.8rem;
       color: #8E7E73;
-      border-left: 5px solid #B8842C ;
-      padding-left: 15px;
     }
 
     .items {
       display: flex;
-      gap: 40px; 
+      gap: 20px; 
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -148,7 +141,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border: 1px solid #E1C1B6
+      border: 1px solid #E1C1B6;
+      margin-bottom: 20px;
     }
 
     .item:hover {
@@ -160,19 +154,21 @@
       height: 220px; 
       object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 10px; /*why*/
     }
 
     .item h3 {
       font-size: 1.4rem; 
-      margin: 10px 0;
+      margin: 15px 0 10px;
+      line-height: 1.3;
     }
     
     .item p{
         text-align: center;
         padding: 5px 0;
         font-size: 1.1rem; 
-        line-height: 1.4;
+        line-height: 1.5;
+        margin: 5px 0;
     }
 
     .item span {
@@ -192,7 +188,7 @@
       cursor: pointer;
       transition: all 0.3s;
       font-size: 18px;
-      /*width: 100%;*/
+      width: 100%;
       margin-top: 10px;
       font-weight: 800;
       justify-content: center;
@@ -207,38 +203,51 @@
      transform: scale(1.03); /* تكبير بسيط جداً عند اللمس */
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background:#984f5b ;
-      color: #ffffff;
-      margin-top: 60px;
+    button a{
+      text-decoration: none;
+      color: white;
     }
+    .title{
+      text-align: center;
+      color: #8E7E73;
+      padding: 40px;
+      font-size: 40px;
+      margin: 20px;
+      
+    }
+    footer {
+  text-align: center;
+ padding: 3px;
+  background:#984f5b ;
+  color: #ffffff;
+  margin-top: 40px;
+  font-size: 14px;
+}
 
-    footer a{
+  footer a{
       text-decoration: none;
       color: #ffffff;
       font-weight: bold;
     }
-  </style>
+
+    </style>
 </head>
 <body>
-
-  <nav>
+    <nav>
     <h1>Aura Beauty</h1>
     <ul>
-      <li><a href="#home">Home</a></li>
+      <li><a href="safia.html">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
-      <li class="acc"><a href="#account">Account</a></li>
+      <li class="acc"><a href="LOGIN.html">Account</a></li>
     </ul>
   </nav>
-
-<header>
+ 
+  <header>
   <h1>Manicure</h1>
 </header>
-
+ <h2 class="title" id="services"> Our Manicure Services</h2>
+<section>
 <section class="types">
   <a href="#treatment" class="card">
     <img src="t2.jpg">
@@ -256,8 +265,7 @@
     <img src="wax.jpg">
     <h3>Additional Services</h3>
   </a>
-</section>
-
+</section></section>
 <section id="treatment" class="details">
   <h2>Hand Spa Treatments</h2>
   <div class="items">
@@ -265,24 +273,24 @@
       <img src="hs.jpg">
       <h3>Hand Soaking with essential oils</h3>
       <p>A relaxing soak that softens the skin and prepares hands for deeper care</p>
-      <span>30 SAR</span>
-      <button>Book Now</button>
+      <span>30 SR</span>
+     <button><a href="LOGIN.html">Book Now</a></button>
     </div>
 
     <div class="item">
       <img src="hsb2.jpg">
       <h3>Gentle Exfoliating Scrub</h3>
       <p>Removes dead skin cells, leaving your hands smooth and refreshed</p>
-      <span>50 SAR</span>
-      <button>Book Now</button>
+      <span>50 SR</span>
+     <button><a href="LOGIN.html">Book Now</a></button>
     </div>
 
     <div class="item">
       <img src="dmm.jpg">
       <h3>Deep Moisturizing Mask</h3>
       <p>Intensively hydrates dry skin and restores softness</p>
-      <span>60 SAR</span>
-      <button>Book Now</button>
+      <span>60 SR</span>
+       <button><a href="LOGIN.html">Book Now</a></button>
     </div>
   </div>
 </section>
@@ -294,23 +302,23 @@
       <img src="nst.jpg">
       <h3>Nail Shaping & Trimming</h3>
       <p>Professional cutting and shaping to suit your nail style</p>
-      <span>80 SAR</span>
-      <button>Book Now</button>
+      <span>80 SR</span>
+    <button><a href="LOGIN.html">Book Now</a></button>
     </div>
 
     <div class="item">
       <img src="nc.jpg">
       <h3>Cuticle Care</h3>
       <p>Gentle cleaning and care for healthy nail growth.</p>
-      <span>100 SAR</span>
-      <button>Book Now</button>
+      <span>100 SR</span>
+       <button><a href="LOGIN.html">Book Now</a></button>
     </div>
     <div class="item">
       <img src="rn.jpg">
       <h3>Regular Nail Polish</h3>
       <p>Application of your favorite color with a clean finish..</p>
-      <span>80 SAR</span>
-      <button>Book Now</button>
+      <span>80 SR</span>
+      <button><a href="LOGIN.html">Book Now</a></button>
     </div>
   </div>
 </section>
@@ -322,24 +330,24 @@
       <img src="gm.jpg">
       <h3>Gel Manicure</h3>
       <p>Long-lasting, glossy polish that resists chipping.</p>
-      <span>120 SAR</span>
-      <button>Book Now</button>
+      <span>120 SR</span>
+      <button><a href="LOGIN.html">Book Now</a></button>
     </div>
 
     <div class="item">
       <img src="fm.jpg">
       <h3>French Manicure</h3>
       <p>Elegant, natural-looking nails with white tips.</p>
-      <span>140 SAR</span>
-      <button>Book Now</button>
+      <span>140 SR</span>
+      <button><a href="LOGIN.html">Book Now</a></button>
     </div>
 
     <div class="item">
       <img src="am2.jpg">
       <h3>Nail Art & Designs</h3>
       <p>Custom designs to match your style and occasion.</p>
-      <span>90 SAR</span>
-      <button>Book Now</button>
+      <span>90 SR</span>
+       <button><a href="LOGIN.html">Book Now</a></button>
     </div>
   </div>
 </section>
@@ -351,39 +359,37 @@
       <img src="nr.jpg">
       <h3>Nail Polish Removal</h3>
       <p>Safe removal without damaging natural nails</p>
-      <span>40 SAR</span>
-      <button>Book Now</button>
+      <span>40 SR</span>
+       <button><a href="LOGIN.html">Book Now</a></button>
     </div>
 
     <div class="item">
       <img src="ns.jpg">
       <h3>Nail Strengthening Treatment</h3>
       <p>Helps weak or brittle nails grow stronger</p>
-      <span>50 SAR</span>
-      <button>Book Now</button>
+      <span>50 SR</span>
+      <button><a href="LOGIN.html">Book Now</a></button>
     </div>
 
     <div class="item">
       <img src="wax.jpg">
       <h3>Paraffin Wax Treatment</h3>
       <p>Deep hydration treatment that leaves hands soft and smooth</p>
-      <span>60 SAR</span>
-      <button>Book Now</button>
+      <span>60 SR</span>
+       <button><a href="LOGIN.html">Book Now</a></button>
     </div>
   </div>
 </section>
-
-<footer>
-    <h3>© 2026 Aura Beauty Salon | All Rights Reserved</h3>
-    <br>
-    <h4>Working hours :</h4>
-    <p> Sat-Thu : 10 AM - 8 PM</p>
-    <br>
-    <h4>Contact</h4>
-    <p>77800000 | aurabeauty@gmail.com</p>
-    <br>
-    <a href="#">Privacy and Policy</a> | <a href="#">Terms and Conditions</a>
-</footer>
+ <footer id="about">
+ <h3>© 2026 Aura Beauty Salon | All Rights Reserved</h3>
+  <h3>Working hours :</h3></h3>
+  <p> Sat-Thu : 10 AM-8PM</p>
+ <h3>Contact</h3>
+ <p>77800000</p>
+ <p>aurabeauty@gmail.com</p>
+  <a href="#">Privacy and Policy</a> |
+<a href="#">Terms and Conditions</a></p>
+  </footer>
 
 </body>
 </html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Beauty | Luxury Spa & Wellness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+  --primary: #bfa37e; /* Muted Gold */
+  --dark: #2c2c2c;
+  --light: #f9f7f2;
+  --text: #555;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--dark);
+  font-weight: 400;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color: #984f5b;
+  position:static;
+  top: 0;
+}
+
+nav h1 {
+  color:  #ffffff;
+;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #551532;
+  font-size: 20px;
+  transition: 0.3s;
+  padding: 10px;
+  
+}
+li.acc{
+  background-color: #dcc4cf;
+  border-radius: 40px;
+ 
+}
+
+
+.logo {
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 15px 40px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--dark);
+}
+
+/* Services */
+.services {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: white;
+  padding: 40px;
+  transition: 0.3s;
+  border: 1px solid #eee;
+  border-radius: 15px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* New Card Images */
+.card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* New Promo Card */
+.promo-card {
+  grid-column: 1 / -1;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  animation: auraGlow 4s ease-in-out infinite alternate;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(images/spa_surp\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo-card h3 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.promo-card p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.promo-btn {
+  background: white;
+  color: var(--primary);
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.promo-btn:hover {
+  background: var(--dark);
+  color: white;
+  transform: scale(1.05);
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  animation-play-state: paused;
+}
+
+/* Elegant Surprise Animation */
+@keyframes auraGlow {
+  0% {
+    box-shadow: 0 15px 40px rgba(191,163,126,0.3), 0 0 20px rgba(191,163,126,0.1);
+  }
+  100% {
+    box-shadow: 0 20px 50px rgba(191,163,126,0.4), 0 0 40px rgba(191,163,126,0.2);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-card {
+    padding: 40px 20px;
+    margin-top: 30px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .services {
+    padding: 60px 5%;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+ padding: 3px;
+  background:#984f5b ;
+  color: #ffffff;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+  footer a{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    </style>
+</head>
+<body>
+         <nav>
+    <h1>Aura Beauty</h1>
+    <ul>
+      <li><a href="safia.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="acc"><a href="LOGIN.html">Account</a></li>
+     
+    </ul>
+  </nav>
+
+    <header class="hero">
+        <h1>Aura Beauty</h1>
+        <p>A Sanctuary of Inner Peace & Elegance</p>
+        <a href="#" class="btn">Book an Experience</a>
+    </header>
+
+    <section class="services">
+        <div class="section-title">
+            <h2>Our Signature Treatments</h2>
+            <p>Indulge in our curated selection of wellness rituals</p>
+        </div>
+        <div class="grid">
+            <div class="service-card">
+                <img src="images/Rejuvenating Facial.jpeg" alt="Luxury Rejuvenating Facial at Aura" class="card-image">
+                <h3>Rejuvenating Facial</h3>
+                <p>Advanced skincare using organic botanicals to restore your natural glow.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="images/Deep Tissue Massage.jpeg" alt="Deep Tissue Massage at Aura Spa" class="card-image">
+                <h3>Deep Tissue Massage</h3>
+                <p>Release tension and find balance with our signature therapeutic massage.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="images/Aura Ritual.jpeg" alt="Aura Ritual Body Treatment" class="card-image">
+                <h3>Aura Ritual</h3>
+                <p>A complete body scrub and essential oil treatment for total relaxation.</p>
+            </div>
+
+            <div class="promo-card">               
+              <h3>✨ Surprise Delight! ✨</h3>
+              <p>Choose any <strong>two spa services</strong> and enjoy <strong>30% off</strong> + a complimentary herbal elixir!</p>
+              <a href="#" class="promo-btn btn">Unlock Magic</a>
+            </div>
+        </div>
+    </section>
+
+
+  <footer>
+ <h3><b>© 2026 Aura Beauty Salon | All Rights Reserved</b></h3>
+  <h3>Working hours :</h3></h3>
+  <p> Sat-Thu : 10 AM-8PM</p>
+ <h4>Contact</h4>
+    <p>77800000 | aurabeauty@gmail.com</p>
+  <a href="#">Privacy and Policy</a> |
+<a href="#">Terms and Conditions</a></p>
+  </footer>
+
+</body>
+</html>
