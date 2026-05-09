@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Beauty - Makeup Services</title>
+    
+    <style>
+        /* 1. التنسيقات العامة والخطوط */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+      nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background-color:#984f5b;
+  position:static;
+  top: 0;
+  flex-direction: row-reverse;
+}
+
+nav h1 {
+  color:  #ffffff;
+;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #551532;
+  font-size: 20px;
+  transition: 0.3s;
+  padding: 10px;
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+
+        /* 3. قسم العنوان الزجاجي (مثل تصميم المناكير) */
+        .hero-section {
+            background-image: url(ggggg.jpeg); /* ضعي هنا صورة خلفية للمكياج */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .glass-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px 60px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+        .glass-box h1 {
+            color: white;
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        /* 4. قسم البطاقات الأربعة (مثل تصميم الثلاث أنواع أظافر) */
+        .services-wrapper {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            width: 280px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+transition: transform 0.4s ease;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+         .card:hover {
+      transform: translateY(-5px);
+       box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+        .price {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .book-now-btn {
+            background-color: #8c4a5c; /* نفس لون الهيدر - اللون البني المحمر */
+            color: white;
+            border: none;
+            padding: 12px 0;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        button:hover{
+        /*background: black;
+        transform: scale(1.02);*/
+     background: #c9b399;
+     transform: scale(1.03); /* تكبير بسيط جداً عند اللمس */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+        /* 5. قسم البراندات (مثل تصميم الخصم Surprise Delight) */
+        .brands-banner {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(gg.jpeg);
+            background-size: cover;
+            border-radius: 20px;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .brands-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+
+        .brands-banner p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .brand-logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+         footer {
+  text-align: center;
+ padding: 3px;
+  background:#984f5b ;
+  color: #ffffff;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+  footer a{
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+    <h1>Aura Beauty</h1>
+    <ul>
+      <li><a href="safia.html">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="acc"><a href="LOGIN.html">Account</a></li>
+    </ul>
+  </nav>
+    <section class="hero-section">
+        <div class="glass-box">
+            <h1>MAKEUP</h1>
+        </div>
+    </section>
+     <section class="brands-banner">
+        <h2>Our Premium Brands</h2>
+        <p> We use the best international brands to ensure your beauty and skin health</p>
+        <div class="brands-grid">
+            <span class="brand-logo">DIOR</span>
+            <span class="brand-logo">MAC</span>
+            <span class="brand-logo">CHANEL</span>
+            <span class="brand-logo">NARS</span>
+        </div>
+    </section>
+
+    <div class="services-wrapper">
+        <div class="card">
+            <div class="card-image"><img src="ber.jpeg" alt="Bridal"></div>
+            <div class="card-content">
+                <h3> Bridal makeup</h3>
+                <p> A regal, charming look for your unforgettable night</p>
+                <div class="price">1500 SR</div>
+                <button class="book-now-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image"><img src="so.jpeg" alt="Evening"></div>
+            <div class="card-content">
+               <h3>escort makeup</h3>
+                <p>An elegant and balanced look for a special guest</p>
+                
+                <div class="price">450 SR</div>
+                <button class="book-now-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image"><img src="ev.jpeg" alt="Soft"></div>
+            <div class="card-content">
+                <h3>soft makeup (Soft)</h3>
+               <p>Subtle touches to enhance your natural beauty</p>
+               
+                <div class="price">250 SR</div>
+                <button class="book-now-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image"><img src="es.jpeg"></div>
+            <div class="card-content">
+             <h3>Evening makeup</h3>
+                <p> Glow with a striking look for your special occasions </p>
+                <div class="price"> SR 350 </div>
+                <button class="book-now-btn">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="about">
+ <h3>© 2026 Aura Beauty Salon | All Rights Reserved</h3>
+  <h3>Working hours :</h3></h3>
+  <p> Sat-Thu : 10 AM-8PM</p>
+ <h3>Contact</h3>
+ <p>77800000</p>
+ <p>aurabeauty@gmail.com</p>
+  <a href="#">Privacy and Policy</a> |
+<a href="#">Terms and Conditions</a></p>
+  </footer>
+
+</body>
+</html>
